@@ -20,7 +20,7 @@
 
 ```bash
 # Ya hicimos git init y el primer commit, solo falta conectar con GitHub
-git remote add origin https://github.com/TU_USUARIO/ejercicios-bigdata.git
+git remote add origin https://github.com/TodoEconometria/ejercicios-bigdata.git
 git branch -M main
 git push -u origin main
 ```
@@ -105,7 +105,7 @@ Una vez que subas el repo a GitHub, comparte estas instrucciones:
 
 ### Para Estudiantes: Cómo Empezar
 
-1. **Haz Fork/Template** del repositorio: [LINK_DE_TU_REPO]
+1. **Haz Fork/Template** del repositorio: https://github.com/TodoEconometria/ejercicios-bigdata
 2. **Clona TU copia** a tu computadora:
    ```bash
    git clone https://github.com/TU_USUARIO/ejercicios-bigdata.git
@@ -133,7 +133,7 @@ Si necesitas agregar contenido o corregir errores:
 3. Notifica a los estudiantes que actualicen:
    ```bash
    # Estudiantes ejecutan en su fork/template:
-   git remote add upstream https://github.com/TU_USUARIO/ejercicios-bigdata.git
+   git remote add upstream https://github.com/TodoEconometria/ejercicios-bigdata.git
    git fetch upstream
    git merge upstream/main
    ```

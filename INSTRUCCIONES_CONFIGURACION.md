@@ -6,7 +6,7 @@
 
 Asegúrate de que estás trabajando en TU copia del repositorio:
 - La URL debe ser: `https://github.com/TU_USUARIO/ejercicios-bigdata`
-- NO debe ser: `https://github.com/IATodoEconometriaBdsd/ejercicios-bigdata`
+- NO debe ser: `https://github.com/TodoEconometria/ejercicios-bigdata` (ese es el original)
 
 ## Paso 2: Clona TU Repositorio
 
