@@ -29,11 +29,43 @@ ejercicios_bigdata/
 
 **⚠️ IMPORTANTE:** Si hiciste fork antes del 4 de diciembre de 2025, es posible que tengas archivos antiguos que ya no necesitas. Vamos a limpiarlos.
 
+#### 🖥️ ¿Dónde ejecutar estos comandos?
+
+Tienes 3 opciones:
+
+**Opción A - Terminal de PyCharm (Recomendado):**
+1. Abre PyCharm con tu proyecto
+2. En el menú inferior, haz clic en **Terminal** (o `Alt + F12`)
+3. La terminal se abre en la carpeta correcta automáticamente
+4. Ejecuta los comandos directamente
+
+**Opción B - CMD de Windows:**
+1. `Win + R` → escribe `cmd` → Enter
+2. Navega a tu proyecto:
+   ```cmd
+   cd C:\ruta\a\tu\ejercicios_bigdata
+   ```
+3. Ejecuta los comandos (reemplaza `/` por `\` si es necesario)
+
+**Opción C - PowerShell:**
+1. Busca "PowerShell" en el menú inicio
+2. Navega: `cd C:\ruta\a\tu\ejercicios_bigdata`
+3. Ejecuta los comandos
+
+**💡 Tip:** En PyCharm la terminal ya está en la carpeta correcta, es lo más fácil.
+
+---
+
 #### Verificar si necesitas limpiar:
 
+**En PyCharm Terminal o CMD:**
 ```bash
-# Ver todos los archivos en tu repositorio
-ls -la
+dir *.md
+```
+
+**En PowerShell o Git Bash:**
+```bash
+ls *.md
 ```
 
 **Busca estos archivos (NO deberían estar):**
@@ -79,12 +111,17 @@ git push origin main
 
 **Verificar que quedó limpio:**
 
+**En PyCharm Terminal o CMD:**
 ```bash
-# Deberías ver SOLO estos archivos principales:
+dir *.md
+```
+
+**En PowerShell o Git Bash:**
+```bash
 ls *.md
 ```
 
-**Resultado esperado:**
+**Resultado esperado (deberías ver SOLO estos archivos):**
 ```
 LEEME.md
 ARQUITECTURA_Y_STACK.md
@@ -93,6 +130,8 @@ ESTRUCTURA_PROYECTO.md
 GUIA_ENTREGA_DASHBOARDS.md
 INSTRUCCIONES_ALUMNOS.md
 ```
+
+Si ves otros archivos como `README.md` o `PROGRESO.md`, la limpieza no funcionó. Intenta la Opción 2 (manual).
 
 ---
 
