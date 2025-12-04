@@ -25,6 +25,77 @@ ejercicios_bigdata/
 
 ## Pasos para Crear y Entregar tu Dashboard
 
+### PASO 0: Limpieza Inicial (Solo Primera Vez)
+
+**⚠️ IMPORTANTE:** Si hiciste fork antes del 4 de diciembre de 2025, es posible que tengas archivos antiguos que ya no necesitas. Vamos a limpiarlos.
+
+#### Verificar si necesitas limpiar:
+
+```bash
+# Ver todos los archivos en tu repositorio
+ls -la
+```
+
+**Busca estos archivos (NO deberían estar):**
+- `README.md` (viejo, debe ser `LEEME.md`)
+- `GUIA_GIT_GITHUB.md`
+- `GUIA_IA_ASISTENTE.md`
+- `INSTRUCCIONES_CONFIGURACION.md`
+- `PROGRESO.md`
+- Carpeta `plantillas/`
+
+#### Si tienes archivos viejos, límpianos así:
+
+**Opción 1 - Limpieza Automática (Recomendado):**
+
+```bash
+# 1. Actualizar desde el repo del profesor (para obtener la versión limpia)
+git fetch upstream
+git reset --hard upstream/main
+
+# 2. Forzar actualización de tu fork en GitHub
+git push origin main --force
+
+# ✅ Listo! Tu repositorio ahora está limpio y actualizado
+```
+
+**Opción 2 - Limpieza Manual (si la automática no funciona):**
+
+```bash
+# 1. Eliminar archivos viejos uno por uno
+git rm README.md GUIA_GIT_GITHUB.md GUIA_IA_ASISTENTE.md INSTRUCCIONES_CONFIGURACION.md PROGRESO.md 2>/dev/null
+git rm -r plantillas/ 2>/dev/null
+
+# 2. Hacer commit de la limpieza
+git commit -m "Limpiar archivos antiguos del repositorio"
+
+# 3. Actualizar desde upstream
+git fetch upstream
+git merge upstream/main
+
+# 4. Subir cambios
+git push origin main
+```
+
+**Verificar que quedó limpio:**
+
+```bash
+# Deberías ver SOLO estos archivos principales:
+ls *.md
+```
+
+**Resultado esperado:**
+```
+LEEME.md
+ARQUITECTURA_Y_STACK.md
+ENTENDIENDO_GIT_Y_RAMAS.md
+ESTRUCTURA_PROYECTO.md
+GUIA_ENTREGA_DASHBOARDS.md
+INSTRUCCIONES_ALUMNOS.md
+```
+
+---
+
 ### 1. Actualizar tu Fork
 
 Antes de empezar, asegúrate de tener la última versión del repositorio:
