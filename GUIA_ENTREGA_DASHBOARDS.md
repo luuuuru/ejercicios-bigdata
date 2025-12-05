@@ -76,36 +76,63 @@ ls *.md
 - `PROGRESO.md`
 - Carpeta `plantillas/`
 
-#### Si tienes archivos viejos, límpianos así:
+#### ⚠️ ANTES DE LIMPIAR - IMPORTANTE:
 
-**Opción 1 - Limpieza Automática (Recomendado):**
+**¿Cuándo hacer esta limpieza?**
+- ✅ Si hiciste fork ANTES del 4 de diciembre de 2025
+- ✅ ANTES de empezar a trabajar en tu dashboard
+- ✅ Si aún NO has creado tu carpeta en `dashboards/`
+- ❌ **NO hagas esto si ya tienes trabajo sin subir a GitHub**
 
+**Archivos que están seguros (NO se borran):**
+- ✅ Tus datos descargados (`datos/nyc_taxi.csv`) - Están en `.gitignore`
+- ✅ Tu entorno virtual (`venv/`) - Está en `.gitignore`
+- ✅ Bases de datos (`*.db`, `*.sqlite`) - Están en `.gitignore`
+- ✅ Otros proyectos fuera de esta carpeta
+
+**Archivos que SÍ se borrarían:**
+- ❌ Tu dashboard si ya lo creaste (en `dashboards/tu-nombre/`)
+- ❌ Cualquier código que hayas escrito y NO subido a GitHub
+
+---
+
+#### Limpieza SEGURA (Paso a Paso):
+
+**PASO 1: Eliminar archivos viejos UNO POR UNO**
+
+**En PyCharm Terminal o CMD:**
 ```bash
-# 1. Actualizar desde el repo del profesor (para obtener la versión limpia)
-git fetch upstream
-git reset --hard upstream/main
-
-# 2. Forzar actualización de tu fork en GitHub
-git push origin main --force
-
-# ✅ Listo! Tu repositorio ahora está limpio y actualizado
+git rm README.md 2>nul
+git rm GUIA_GIT_GITHUB.md 2>nul
+git rm GUIA_IA_ASISTENTE.md 2>nul
+git rm INSTRUCCIONES_CONFIGURACION.md 2>nul
+git rm PROGRESO.md 2>nul
+git rm -r plantillas/ 2>nul
 ```
 
-**Opción 2 - Limpieza Manual (si la automática no funciona):**
-
+**En PowerShell o Git Bash:**
 ```bash
-# 1. Eliminar archivos viejos uno por uno
-git rm README.md GUIA_GIT_GITHUB.md GUIA_IA_ASISTENTE.md INSTRUCCIONES_CONFIGURACION.md PROGRESO.md 2>/dev/null
+git rm README.md 2>/dev/null
+git rm GUIA_GIT_GITHUB.md 2>/dev/null
+git rm GUIA_IA_ASISTENTE.md 2>/dev/null
+git rm INSTRUCCIONES_CONFIGURACION.md 2>/dev/null
+git rm PROGRESO.md 2>/dev/null
 git rm -r plantillas/ 2>/dev/null
+```
 
-# 2. Hacer commit de la limpieza
+**PASO 2: Guardar la limpieza**
+```bash
 git commit -m "Limpiar archivos antiguos del repositorio"
+```
 
-# 3. Actualizar desde upstream
+**PASO 3: Actualizar desde el repositorio del profesor**
+```bash
 git fetch upstream
 git merge upstream/main
+```
 
-# 4. Subir cambios
+**PASO 4: Subir los cambios a tu fork en GitHub**
+```bash
 git push origin main
 ```
 
