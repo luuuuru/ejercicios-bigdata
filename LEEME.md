@@ -2,6 +2,22 @@
 
 Bienvenido a esta serie de ejercicios prácticos diseñados para aprender los fundamentos de Big Data utilizando Python. Este material está pensado para alumnos que se están iniciando en la programación y el análisis de datos.
 
+## Índice de Documentación
+
+### Para Alumnos
+- **[INSTRUCCIONES_ALUMNOS.md](INSTRUCCIONES_ALUMNOS.md)** - Guía de Git y PyCharm
+- **[GUIA_ENTREGA_DASHBOARDS.md](GUIA_ENTREGA_DASHBOARDS.md)** - Cómo crear y entregar dashboards
+- **[ENTENDIENDO_GIT_Y_RAMAS.md](ENTENDIENDO_GIT_Y_RAMAS.md)** - Explicación visual de Git y ramas
+
+### Para Referencia
+- **[ARQUITECTURA_Y_STACK.md](ARQUITECTURA_Y_STACK.md)** - Explicación del stack tecnológico
+- **[ESTRUCTURA_PROYECTO.md](ESTRUCTURA_PROYECTO.md)** - Buenas prácticas y organización
+
+### Para Profesor (Solo Instructor)
+- **[GUIA_PROFESOR.md](GUIA_PROFESOR.md)** - Gestión del proyecto colaborativo
+- **[EJEMPLO_PRIMERA_TAREA.md](EJEMPLO_PRIMERA_TAREA.md)** - Ejemplo completo de asignación de tarea
+- **[PROXIMOS_PASOS.md](PROXIMOS_PASOS.md)** - Setup inicial del repositorio
+
 ## ¿Qué vamos a aprender?
 En estos ejercicios no solo ejecutaremos código, sino que entenderemos **qué** estamos haciendo y **por qué**. Cubriremos:
 
@@ -18,13 +34,21 @@ ejercicios_bigdata/
 ├── __init__.py           # Archivo que indica a Python que esta carpeta es un "paquete"
 ├── requirements.txt      # Lista de "ingredientes" (librerías) que necesita nuestro proyecto
 ├── LEEME.md              # Este archivo de instrucciones
+│
 ├── datos/                # Carpeta donde guardaremos los datos descargados
 │   └── descargar_datos.py # Script (programa) para bajar los datos de internet
-└── ejercicios/           # Carpeta con los ejercicios paso a paso
-    ├── 01_cargar_sqlite.py   # Ejercicio 1: Bases de datos SQL
-    ├── 02_limpieza_datos.py  # Ejercicio 2: Limpieza con Pandas
-    ├── 03_parquet_dask.py    # Ejercicio 3: Formatos Big Data y Dask
-    └── 04_pyspark_query.py   # Ejercicio 4: Introducción a Apache Spark
+│
+├── ejercicios/           # Carpeta con los ejercicios paso a paso
+│   ├── 01_cargar_sqlite.py   # Ejercicio 1: Bases de datos SQL
+│   ├── 02_limpieza_datos.py  # Ejercicio 2: Limpieza con Pandas
+│   ├── 03_parquet_dask.py    # Ejercicio 3: Formatos Big Data y Dask
+│   └── 04_pyspark_query.py   # Ejercicio 4: Introducción a Apache Spark
+│
+└── dashboards/           # Dashboards de visualización (Flask)
+    └── nyc_taxi_eda/     # Ejemplo de dashboard con EDA
+        ├── app.py
+        ├── templates/
+        └── README.md
 ```
 
 ## Conceptos Clave para Principiantes

@@ -1,41 +1,15 @@
-# Gitignore para Proyecto de Big Data con Python
+# =============================================================================
+# CLAUDE CODE
+# =============================================================================
+.claude/
 
-# ============================================
-# ARCHIVOS DE DATOS (No subir datos grandes)
-# ============================================
-# Bases de datos
-*.db
-*.sqlite
-*.sqlite3
-
-# Archivos de datos grandes
-*.csv
-*.parquet
-*.json
-*.xlsx
-*.xls
-
-# Carpetas completas - los estudiantes las crean
-datos/
-ejercicios/
-
-# Archivos de salida
-resultados/
-output/
-*.log
-
-# ============================================
+# =============================================================================
 # PYTHON
-# ============================================
-# Byte-compiled / optimized / DLL files
+# =============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -49,130 +23,103 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# PyInstaller
-*.manifest
-*.spec
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-
-# IPython
-profile_default/
-ipython_config.py
-
-# Environments
-.env
-.venv
-env/
+# Virtual Environment
+.venv/
 venv/
 ENV/
-env.bak/
-venv.bak/
+env/
 
-# ============================================
-# IDEs y Editores
-# ============================================
-# PyCharm
+# IDE
 .idea/
-*.iml
-*.iws
-.idea_modules/
-
-# VS Code
 .vscode/
-*.code-workspace
-
-# Spyder
-.spyderproject
-.spyproject
-
-# Rope
-.ropeproject
-
-# Eclipse
-.project
-.pydevproject
-.settings/
-
-# ============================================
-# SISTEMAS OPERATIVOS
-# ============================================
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.stackdump
-[Dd]esktop.ini
-$RECYCLE.BIN/
-
-# Linux
-*~
-.directory
-
-# ============================================
-# SPARK / DASK
-# ============================================
-# Spark
-metastore_db/
-derby.log
-spark-warehouse/
-
-# Dask
-dask-worker-space/
-
-# ============================================
-# OTROS
-# ============================================
-# Archivos temporales
-*.tmp
-*.bak
 *.swp
 *.swo
 *~
 
-# Archivos de configuración local
-config.local.py
-secrets.py
+# =============================================================================
+# DATA FILES - Archivos de datos
+# =============================================================================
+# IMPORTANTE: GitHub tiene límite de 100MB por archivo
+# nyc_taxi.csv es ~121MB, por lo tanto DEBE ser ignorado
+
+# Ignorar datos grandes en carpeta datos/
+datos/*.csv
+datos/*.parquet
+datos/*.db
+datos/*.sqlite
+
+# Ignorar bases de datos en la raíz del proyecto
+*.db
+*.sqlite
+*.sqlite3
+
+# EXCEPCIONES: Permitir archivos pequeños de ejemplo (si los hay)
+# !datos/ejemplo_pequeño.csv
+
+# Ignorar imágenes generadas por ejercicios
+datos/*.png
+datos/*.jpg
+datos/*.jpeg
+datos/*.gif
+
+# Permitir solo scripts y documentación
+!datos/descargar_datos.py
+!datos/README.md
+!datos/*.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Flask
+instance/
+.webassets-cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# =============================================================================
+# ARCHIVOS SOLO PARA EL PROFESOR (Los alumnos NO deben ver estos)
+# =============================================================================
+GUIA_PROFESOR.md
+INSTRUCCIONES_PROFESOR.md
+INSTRUCCIONES_PROFESOR_SIMPLE.md
+EJEMPLO_PRIMERA_TAREA.md
+ISSUE_TEMPLATE_SIMPLE.md
+PROXIMOS_PASOS.md
+RESUMEN_COMPLETO.md
+DIAGRAMA_SIMPLE.md
+ESTRUCTURA_PROFESOR.md
+
+# Archivos de notas privadas del profesor
+NOTAS_PROFESOR.md
+CALIFICACIONES.md
+*.profesor.md
+
+# Configuración local del profesor
 .env.local
+secrets.txt
+credenciales.txt
 
-# ============================================
-# EXCEPCIONESA - ARCHIVOS QUE SÍ QUEREMOS
-# ============================================
-# Ejemplo: si quieres subir un CSV pequeño de ejemplo
-# !datos/ejemplo.csv
+# Backups y exportaciones
+backups/
+exports/
+*.backup
 
-# Scripts de Python sí se suben
-!*.py
+# Archivos de evaluación
+evaluaciones/
+rubrica_privada.md
 
-# Documentación
-!*.md
-!*.txt
+# Documentación interna de sesiones de trabajo
+RESUMEN_SESIONES.md
+EXPLICACION_COMANDOS_LIMPIEZA.md
