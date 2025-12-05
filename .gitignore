@@ -105,6 +105,10 @@ ESTRUCTURA_PROFESOR.md
 NOTAS_PROFESOR.md
 CALIFICACIONES.md
 *.profesor.md
+PARA_PROFESOR.md
+
+# Especificaciones y diseño interno
+.specs/
 
 # Configuración local del profesor
 .env.local
