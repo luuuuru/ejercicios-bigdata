@@ -6,3 +6,5 @@ pyspark
 matplotlib
 seaborn
 requests
+flask
+plotly
