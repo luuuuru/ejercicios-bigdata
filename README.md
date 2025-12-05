@@ -1,6 +1,6 @@
 # 🎓 Ejercicios Big Data con Python
 
-> Repositorio educativo para aprender Big Data con Python, Pandas, Dask, PySpark y visualización de datos
+> Repositorio educativo para aprender Big Data con Python, Pandas, Dask, PySpark y visualización de datos.
 
 [![Disponible para Consultoría](https://img.shields.io/badge/Consultoría-Disponible-brightgreen)](mailto:cursos@todoeconometria.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-blue)](https://www.linkedin.com/in/juangutierrezconsultor/)
