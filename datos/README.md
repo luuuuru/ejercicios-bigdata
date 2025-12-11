@@ -1,6 +1,6 @@
 # Datos del Proyecto
 
-Esta carpeta contiene los datasets utilizados en los ejercicios.
+Esta carpeta contiene los datasets utilizados en los ejercicios del curso.
 
 ## ⚠️ Archivos NO Incluidos en Git
 

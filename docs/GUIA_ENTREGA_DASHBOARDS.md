@@ -1,6 +1,6 @@
 # Guía de Entrega de Dashboards
 
-Esta guía explica cómo los alumnos deben crear, desarrollar y entregar sus dashboards para revisión.
+Esta guía explica cómo los alumnos deben crear, desarrollar y entregar sus dashboards para revisión del curso.
 
 ---
 
