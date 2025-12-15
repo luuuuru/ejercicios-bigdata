@@ -44,6 +44,7 @@ entregas/
 ## 🚀 Paso a Paso: Cómo Entregar
 
 ### **Paso 1: Hacer Fork del Repositorio**
+(Haz esto si no tienes aun nada del repositorio, de otra forma empieza en el paso 3)
 
 **¿Qué es un fork?** Es tu copia personal del repositorio.
 
