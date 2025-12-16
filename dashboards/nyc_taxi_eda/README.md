@@ -1,6 +1,6 @@
 # Dashboard EDA - NYC Taxi Dataset
 
-Dashboard interactivo de ejemplo que muestra un Análisis Exploratorio de Datos (EDA) del dataset NYC Taxi.
+Dashboard interactivo de ejemplo que muestra un análisis exploratorio de datos (EDA) del dataset NYC Taxi.
 
 ## Estructura
 

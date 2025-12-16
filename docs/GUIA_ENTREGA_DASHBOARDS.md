@@ -1,6 +1,6 @@
 # Guía de Entrega de Dashboards
 
-Esta guía explica cómo los alumnos deben crear, desarrollar y entregar sus dashboards para revisión.
+Esta guía explica cómo los alumnos deben crear, desarrollar y entregar sus dashboards para revisión del curso.
 
 ---
 
@@ -49,7 +49,7 @@ Tienes 3 opciones:
 
 **Opción C - PowerShell:**
 1. Busca "PowerShell" en el menú inicio
-2. Navega: `cd C:\ruta\a\tu\ejercicios_bigdata`
+2. Navega: `cd C:\ruta\a\tu\ejercicios-bigdata`
 3. Ejecuta los comandos
 
 **💡 Tip:** En PyCharm la terminal ya está en la carpeta correcta, es lo más fácil.

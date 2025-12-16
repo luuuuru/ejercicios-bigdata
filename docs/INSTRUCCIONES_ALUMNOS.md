@@ -1,6 +1,6 @@
 # Guía del Alumno: Flujo de Trabajo con PyCharm
 
-Sigue estos pasos EXACTOS para descargar los ejercicios, trabajar en ellos y enviarlos. Usaremos **PyCharm** para casi todo.
+Sigue estos pasos para descargar los ejercicios, trabajar en ellos y enviarlos. Usaremos **PyCharm** para casi todo.
 
 ## 1. Preparación Inicial (Solo la primera vez)
 

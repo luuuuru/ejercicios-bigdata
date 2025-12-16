@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 # --- CONFIGURACIÓN DE RUTAS ---
 # Es importante ser ordenado con las rutas.
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-RUTA_CSV = os.path.join(BASE_DIR, "ejercicios_bigdata", "datos", "nyc_taxi.csv")
-RUTA_DB = os.path.join(BASE_DIR, "ejercicios_bigdata", "taxi.db")
+RUTA_CSV = os.path.join(BASE_DIR, "ejercicios-bigdata", "datos", "nyc_taxi.csv")
+RUTA_DB = os.path.join(BASE_DIR, "ejercicios-bigdata", "taxi.db")
 
 def cargar_csv_a_sqlite():
     """
