@@ -91,35 +91,31 @@ instance/
 # =============================================================================
 # ARCHIVOS SOLO PARA EL PROFESOR (Los alumnos NO deben ver estos)
 # =============================================================================
-GUIA_PROFESOR.md
-INSTRUCCIONES_PROFESOR.md
-INSTRUCCIONES_PROFESOR_SIMPLE.md
-EJEMPLO_PRIMERA_TAREA.md
-ISSUE_TEMPLATE_SIMPLE.md
-PROXIMOS_PASOS.md
-RESUMEN_COMPLETO.md
-DIAGRAMA_SIMPLE.md
-ESTRUCTURA_PROFESOR.md
 
-# Archivos de notas privadas del profesor
-NOTAS_PROFESOR.md
-CALIFICACIONES.md
-*.profesor.md
+# Carpeta principal del profesor - TODO aquí dentro es privado
+.profesor/
 
-# Configuración local del profesor
+# Scripts del profesor (SOLO LOCALES, NO PUBLICAR)
+scripts/
+PROFE.bat
+
+# Otros archivos privados
+.specs/
 .env.local
 secrets.txt
 credenciales.txt
-
-# Backups y exportaciones
 backups/
 exports/
 *.backup
-
-# Archivos de evaluación
 evaluaciones/
-rubrica_privada.md
+*.profesor.md
 
-# Documentación interna de sesiones de trabajo
-RESUMEN_SESIONES.md
-EXPLICACION_COMANDOS_LIMPIEZA.md
+# =============================================================================
+# RECORDATORIO IMPORTANTE
+# =============================================================================
+# Al hacer commits, usa mensajes CORTOS:
+# ✅ CORRECTO:   git commit -m "Actualizar ejercicios"
+# ❌ EVITAR:     Mensajes largos con múltiples líneas
+#
+# Razón: Mensajes cortos = tooltips pequeños en GitHub
+datos/csv_tienda_informatica/
