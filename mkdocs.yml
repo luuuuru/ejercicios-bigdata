@@ -196,6 +196,8 @@ nav:
       - '2.3 - Migracion SQLite → PostgreSQL': ejercicios/04-migracion-sqlite-postgresql.md
       - '3.1 - Oracle HR': ejercicios/05-oracle-hr.md
       - '5.1 - Analisis Excel/Python': ejercicios/06-analisis-excel-python.md
+    - Big Data y ETL:
+      - '02 - Pipeline ETL QoG': ejercicios/07-pipeline-etl-qog.md
 
   - Dashboards:
     - dashboards/index.md
