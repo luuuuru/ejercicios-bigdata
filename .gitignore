@@ -46,37 +46,29 @@ env/
 # IMPORTANTE: GitHub tiene límite de 100MB por archivo
 # nyc_taxi.csv es ~121MB, por lo tanto DEBE ser ignorado
 
-# Ignorar datos grandes en carpeta datos/
-datos/*.csv
-datos/*.parquet
-datos/*.db
-datos/*.sqlite
-
-# Ignorar bases de datos en la raíz del proyecto
+# Bases de datos (GLOBAL - nunca deben subirse al repositorio)
 *.db
 *.sqlite
 *.sqlite3
 
-# EXCEPCIONES: Permitir archivos pequeños de ejemplo (si los hay)
-# !datos/ejemplo_pequeño.csv
+# Ignorar datos grandes en carpeta datos/ (CSV, Excel, Parquet)
+datos/**/*.csv
+datos/**/*.parquet
+datos/csv_tienda_informatica/
 
-# Ignorar imágenes generadas por ejercicios
-datos/*.png
-datos/*.jpg
-datos/*.jpeg
-datos/*.gif
+# EXCEPCIONES: Permitir documentación y scripts de descarga
+!datos/**/README.md
+!datos/**/download_instructions.md
+!datos/**/descargar_datos.py
 
-# Permitir solo scripts y documentación
-!datos/descargar_datos.py
-!datos/README.md
-!datos/*.py
+# Ignorar imágenes generadas dinámicamente
+datos/**/*.png
+datos/**/*.jpg
+datos/**/*.gif
 
 # =============================================================================
-# ENTREGAS DE ALUMNOS - Protección contra subir archivos no deseados
+# ENTREGAS DE ALUMNOS - Protección
 # =============================================================================
-# Los alumnos NO deben subir datos, logs, venv, ni credenciales
-# Solo código fuente, SQL, documentación, requirements.txt
-
 # Datos generados por alumnos
 entregas/**/data/
 entregas/**/*.csv
@@ -84,88 +76,58 @@ entregas/**/*.xlsx
 entregas/**/*.parquet
 entregas/**/*.json
 entregas/**/*.xml
-
-# Bases de datos de alumnos
 entregas/**/*.db
 entregas/**/*.sqlite
-entregas/**/*.sqlite3
 
-# Logs de alumnos
+# Logs y entornos
 entregas/**/logs/
-entregas/**/*.log
+entregas/**/venv/
+entregas/**/.venv/
+entregas/**/__pycache__/
 
-# Credenciales (permitir .env.example, bloquear .env)
+# Credenciales
 entregas/**/.env
 !entregas/**/.env.example
 
-# Virtual environments de alumnos
-entregas/**/venv/
-entregas/**/env/
-entregas/**/.venv/
-
-# Python cache de alumnos
-entregas/**/__pycache__/
-entregas/**/*.pyc
-entregas/**/*.pyo
-
-# Archivos temporales de alumnos
-entregas/**/tmp/
-entregas/**/*.tmp
-entregas/**/temp/
-
-# Capturas grandes (permitir solo en docs/capturas/)
-entregas/**/*.png
-entregas/**/*.jpg
-entregas/**/*.jpeg
-!entregas/**/docs/capturas/*.png
-!entregas/**/docs/capturas/*.jpg
-!entregas/**/docs/capturas/*.jpeg
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Flask
-instance/
-.webassets-cache
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-
 # =============================================================================
-# ARCHIVOS SOLO PARA EL PROFESOR (Los alumnos NO deben ver estos)
+# PRIVACIDAD Y SEGURIDAD (PROFESOR)
 # =============================================================================
 
-# Carpeta principal del profesor - TODO aquí dentro es privado
+# 1. Carpeta PRIVADA del profesor (Soluciones, exámenes, notas)
 .profesor/
 
-# Scripts del profesor (SOLO LOCALES, NO PUBLICAR)
-scripts/
-PROFE.bat
+# 1b. Memoria de Claude Code (contiene referencias a archivos privados)
+CLAUDE.md
 
-# Otros archivos privados
-.specs/
+# 2. Scripts de administración del profesor (NO publicar)
+scripts/
+
+# 3. Modulo 07 oculto temporalmente (no publicar hasta fecha indicada)
+ejercicios/07_infraestructura_bigdata/
+
+# 4. Configuración local y secretos
+.env
 .env.local
 secrets.txt
 credenciales.txt
+*.pem
+*.key
+
+# 4. Otros archivos privados del profesor
+PROFE.bat
+*.backup
 backups/
 exports/
-*.backup
 evaluaciones/
 *.profesor.md
 
 # =============================================================================
-# RECORDATORIO IMPORTANTE
+# SISTEMA OPERATIVO Y LOGS
 # =============================================================================
-# Al hacer commits, usa mensajes CORTOS:
-# ✅ CORRECTO:   git commit -m "Actualizar ejercicios"
-# ❌ EVITAR:     Mensajes largos con múltiples líneas
-#
-# Razón: Mensajes cortos = tooltips pequeños en GitHub
-datos/csv_tienda_informatica/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.ipynb_checkpoints
+instance/
+.webassets-cache

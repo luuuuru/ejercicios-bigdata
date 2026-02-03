@@ -1,6 +1,6 @@
 # Ejercicio 2.2: PostgreSQL con Base de Datos Jardinería
 
-> **Estado:** En construcción
+> **Estado:** Disponible
 
 ---
 

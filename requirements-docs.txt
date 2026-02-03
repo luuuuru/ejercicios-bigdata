@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencias para generar la documentacion con MkDocs Material
 
 # MkDocs core
@@ -16,3 +17,8 @@ markdown>=3.5.0
 
 # Mermaid diagrams support (built-in en Material)
 # Chart.js y otros se cargan via CDN en las paginas
+=======
+mkdocs-material>=9.0.0
+mkdocs-minify-plugin>=0.7.0
+pymdown-extensions>=9.9
+>>>>>>> 4df5efddc606911df806c4ff90b7658fdeb12273

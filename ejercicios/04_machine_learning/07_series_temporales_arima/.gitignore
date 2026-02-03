@@ -1,0 +1,4 @@
+# Outputs generados por el script (no subir al repo)
+output/*.png
+output/*.csv
+!output/.gitkeep

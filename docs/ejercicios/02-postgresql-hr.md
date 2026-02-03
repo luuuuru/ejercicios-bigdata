@@ -1,6 +1,6 @@
 # Ejercicio 2.1: PostgreSQL con Base de Datos HR
 
-> **Estado:** En construcción
+> **Estado:** Disponible
 
 ---
 

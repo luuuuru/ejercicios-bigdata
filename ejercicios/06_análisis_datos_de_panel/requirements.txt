@@ -1,0 +1,11 @@
+pandas
+numpy
+statsmodels
+linearmodels
+panel
+altair
+matplotlib
+seaborn
+openpyxl
+requests
+scipy

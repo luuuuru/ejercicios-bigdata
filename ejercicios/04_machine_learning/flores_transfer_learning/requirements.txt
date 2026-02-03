@@ -1,0 +1,19 @@
+# Clasificacion de Flores con Transfer Learning
+# ==============================================
+# Instalar: pip install -r requirements.txt
+
+# Core
+numpy>=1.24.0
+pandas>=2.0.0
+pillow>=9.5.0
+
+# Machine Learning
+scikit-learn>=1.2.0
+
+# Deep Learning (TensorFlow)
+# Si tienes GPU, instalar: pip install tensorflow[and-cuda]
+# Si no, instalar version CPU: pip install tensorflow
+tensorflow>=2.12.0
+
+# Visualizacion
+plotly>=5.14.0

@@ -1,6 +1,6 @@
 # Ejercicio 5.1: Análisis de Datos con Excel y Python
 
-> **Estado:** En construcción
+> **Estado:** Disponible
 
 ---
 

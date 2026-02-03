@@ -1,6 +1,6 @@
 # Ejercicio 3.1: Oracle con Base de Datos HR
 
-> **Estado:** En construcción
+> **Estado:** Disponible
 
 ---
 

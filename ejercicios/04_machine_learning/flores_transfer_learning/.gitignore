@@ -1,0 +1,2 @@
+# Ignorar output generado (dataset, embeddings, modelos)
+output/

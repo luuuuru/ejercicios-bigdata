@@ -179,6 +179,10 @@ nav:
     - Instalacion de Herramientas: guia-inicio/instalacion.md
     - Tu Primer Ejercicio: guia-inicio/primer-ejercicio.md
     - Roadmap del Curso: guia-inicio/roadmap.md
+<<<<<<< HEAD
+=======
+    - Infraestructura del Lab: infraestructura.md
+>>>>>>> 4df5efddc606911df806c4ff90b7658fdeb12273
 
   - Git y GitHub:
     - git-github/index.md
@@ -189,6 +193,7 @@ nav:
 
   - Ejercicios:
     - ejercicios/index.md
+<<<<<<< HEAD
     - Bases de Datos:
       - '1.1 - Introduccion SQLite': ejercicios/01-introduccion-sqlite.md
       - '2.1 - PostgreSQL HR': ejercicios/02-postgresql-hr.md
@@ -206,6 +211,47 @@ nav:
     - Guia General de Entregas: entregas/guia-entregas.md
 
   - FAQ: faq.md
+=======
+    - 'Modulo 1: Bases de Datos':
+      - '1.1 - Introduccion SQLite': ejercicios/01-introduccion-sqlite.md
+      - '2.1 - PostgreSQL HR': ejercicios/02-postgresql-hr.md
+      - '2.2 - PostgreSQL Jardineria': ejercicios/03-postgresql-jardineria.md
+      - '2.3 - Migracion SQLite a PostgreSQL': ejercicios/04-migracion-sqlite-postgresql.md
+      - '3.1 - Oracle HR': ejercicios/05-oracle-hr.md
+      - '5.1 - Analisis Excel/Python': ejercicios/06-analisis-excel-python.md
+    - 'Modulo 2: Big Data y ETL':
+      - 'Pipeline ETL QoG': ejercicios/02-pipeline-etl-qog.md
+      - 'Procesamiento Distribuido': ejercicios/03-procesamiento-distribuido.md
+    - 'Modulo 3: Analitica Avanzada':
+      - 'Machine Learning': ejercicios/04-machine-learning.md
+      - 'Series Temporales ARIMA': ejercicios/07-series-temporales-arima.md
+      - 'NLP y Text Mining': ejercicios/05-nlp-mining.md
+    - 'Modulo 4: Econometria de Panel':
+      - 'Analisis de Datos de Panel': ejercicios/08-panel-data.md
+    - 'Trabajo Final':
+      - 'Enunciado y Plantilla': ejercicios/06-trabajo-final-capstone.md
+
+  - Dashboards y Resultados:
+    - dashboards/index.md
+    - 'Machine Learning':
+      - 'PCA + K-Means Iris': dashboards/02_pca_iris_clustering.md
+      - 'PCA estilo FactoMineR': dashboards/02_PCA_FactoMineR_style.md
+      - 'Transfer Learning Flores': dashboards/flores-transfer-learning.md
+    - 'Series Temporales':
+      - 'ARIMA/SARIMA Box-Jenkins': dashboards/04_series_temporales_arima.md
+      - 'ARIMA PRO (Tema Financiero)': dashboards/arima-sarima-pro.md
+    - 'NLP y Text Mining':
+      - 'Conteo de Palabras': dashboards/EJERCICIO_01_CONTEO.md
+      - 'Filtro de Stopwords': dashboards/EJERCICIO_02_LIMPIEZA.md
+      - 'Similitud de Jaccard': dashboards/04_similitud_jaccard.md
+      - 'Vectorizacion y Clustering': dashboards/05_vectorizacion_y_clustering.md
+    - 'Datos de Panel (Big Data)':
+      - 'QoG - Spark + PostgreSQL + ML': dashboards/06_analisis_panel_qog.md
+
+  - Entregas:
+    - Guia General: entregas/guia-entregas.md
+    - FAQ: faq.md
+>>>>>>> 4df5efddc606911df806c4ff90b7658fdeb12273
 
 copyright: >
   Copyright &copy; 2024 TodoEconometria -

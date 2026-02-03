@@ -1,0 +1,19 @@
+# Dependencias para el Trabajo Final
+# Ejecuta: pip install -r requirements.txt
+
+# Spark
+pyspark==3.5.4
+
+# Visualizacion
+matplotlib>=3.7
+seaborn>=0.12
+
+# Base de datos
+psycopg2-binary>=2.9
+
+# Datos
+pandas>=2.0
+pyarrow>=14.0
+
+# ML (si usas clustering)
+scikit-learn>=1.3

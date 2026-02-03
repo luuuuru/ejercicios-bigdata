@@ -1,6 +1,6 @@
 # Ejercicio 2.3: Migración SQLite → PostgreSQL
 
-> **Estado:** En construcción
+> **Estado:** Disponible
 
 ---
 

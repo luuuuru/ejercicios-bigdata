@@ -1,128 +1,128 @@
 # 🚀 Big Data con Python - De Cero a Producción
 
-> **Aprende a procesar millones de registros sin que tu computadora explote**
-> Repositorio educativo completo para dominar Big Data con Python, desde conceptos básicos hasta producción.
+> **Aprende a procesar millones de registros de forma escalable y reproducible**
 
-[![GitHub stars](https://img.shields.io/github/stars/TodoEconometria/ejercicios-bigdata?style=social)](https://github.com/TodoEconometria/ejercicios-bigdata/stargazers)
-[![Documentación](https://img.shields.io/badge/📖_Documentación-Leer-blue?style=for-the-badge)](https://todoeconometria.github.io/ejercicios-bigdata/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juangutierrezconsultor/)
-[![Web](https://img.shields.io/badge/Web-TodoEconometria-FF6B35)](https://www.todoeconometria.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+
+### [**Visita el sitio web del curso**](https://todoeconometria.github.io/ejercicios-bigdata/) — Documentacion, dashboards interactivos y guias completas.
 
 ---
 
-## 📖 Documentación Completa
+## 👨‍🏫 Autor y Metodología
 
-**Esta es la landing page del repositorio.**
-Toda la documentación, guías, ejercicios y tutoriales están en:
+**Profesor:** Juan Marcelo Gutierrez Miranda  
+**Afiliación:** @TodoEconometria  
+**Repositorio Oficial:** [github.com/TodoEconometria/ejercicios-bigdata](https://github.com/TodoEconometria/ejercicios-bigdata)
 
-### **👉 [todoeconometria.github.io/ejercicios-bigdata](https://todoeconometria.github.io/ejercicios-bigdata/)**
+> Este curso sigue una metodología rigurosa basada en referencias académicas líderes en computación distribuida y ciencia de datos (Dean & Ghemawat, 2008; Zaharia et al., 2016).
+
+---
+
+## 🎯 Objetivo del Curso
+
+Capacitar a estudiantes y profesionales en el manejo de grandes volúmenes de datos utilizando el ecosistema moderno de Python. El enfoque es **práctico ("Hands-on")** pero con fundamentos teóricos sólidos.
+
+### ¿Qué aprenderás?
+
+1. **Gestión de Datos:** SQL vs NoSQL, almacenamiento columnar (Parquet).
+2. **Procesamiento Distribuido:** Dask y Apache Spark.
+3. **Escalabilidad:** Pipeline ETL reproducibles.
+4. **Calidad de Datos:** Limpieza y validación automática.
+
+---
+
+## 🏗️ Estructura del Repositorio
+
+Este repositorio contiene **ejercicios diseñados para ser completados por el estudiante**.  
+NO contiene soluciones directas en la rama principal.
+
+```plaintext
+ejercicios-bigdata/
+├── ejercicios/                 # Enunciados y esqueletos de codigo
+│   ├── 01_bases_de_datos/
+│   ├── 02_limpieza_datos/
+│   ├── 03_procesamiento_distribuido/
+│   ├── 04_machine_learning/
+│   ├── 05_nlp_text_mining/
+│   ├── 06_análisis_datos_de_panel/
+│   └── utils/                  # Herramientas auxiliares (Parquet, Spark)
+│
+├── datos/                      # Instrucciones y scripts de descarga
+│   ├── qog/                    # Quality of Government (Panel Data)
+│   └── descargar_datos.py      # Descarga automatica de datasets
+│
+├── entregas/                   # Zona de entregas por modulo
+│   ├── 01_bases_de_datos/
+│   ├── 02_limpieza_datos/
+│   └── ...
+│
+├── trabajo_final/              # Proyecto integrador (Capstone)
+│   └── plantilla/              # Plantilla numerada para el alumno
+│
+└── docs/                       # Documentacion web (MkDocs)
+```
 
 ---
 
 ## 🚀 Inicio Rápido
 
-¿Primera vez aquí? Sigue estos pasos:
+Sigue estos pasos para configurar tu entorno de trabajo:
 
-1. **[📚 Guía de Instalación](https://todoeconometria.github.io/ejercicios-bigdata/guia-inicio/instalacion/)** - Configura tu entorno
-2. **[🔧 Fork y Clone](https://todoeconometria.github.io/ejercicios-bigdata/git-github/fork-clone/)** - Comienza a trabajar
-3. **[📝 Ver Ejercicios](https://todoeconometria.github.io/ejercicios-bigdata/ejercicios/)** - Lista completa
-
----
-
-## ⚠️ IMPORTANTE: Mantén tu Fork Actualizado
-
-> **Si ya hiciste fork del repositorio, lee esto:**
->
-> Durante el curso agregaré **nuevos ejercicios constantemente**. Tu fork NO se actualiza automáticamente.
->
-> **👉 [Guía completa de sincronización →](https://todoeconometria.github.io/ejercicios-bigdata/git-github/sincronizar-fork/#el-problema)**
->
-> **Resumen rápido:**
-> ```bash
-> git fetch upstream
-> git merge upstream/main
-> ```
->
-> **¿No funciona?** Lee la guía completa arriba - tiene diagramas paso a paso.
-
----
-
-## 🎯 ¿Qué Aprenderás?
-
-### El Problema Común
-
-```python
-# ❌ Antes: Excel y Pandas básico
-df = pd.read_csv("ventas_5_años.csv")  # 💥 MemoryError
-df.groupby("región").sum()              # 🐌 20 minutos
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/TU_USUARIO/ejercicios-bigdata.git
+cd ejercicios-bigdata
 ```
 
-### La Solución
-
-```python
-# ✅ Después: Big Data con Python
-df = dd.read_csv("ventas_5_años.csv")  # ⚡ Carga lazy
-df.groupby("región").sum().compute()    # 🚀 2 segundos
+### 2. Crear entorno virtual
+```bash
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# Linux/Mac:
+source .venv/bin/activate
 ```
 
-**Resultado:** Procesas 100GB de datos en tu laptop como si fueran 10MB.
+### 3. Instalar dependencias
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configurar Infraestructura (Docker)
+Este curso requiere PostgreSQL y pgAdmin. Consulta la guia de infraestructura:
+
+> [Guia de Infraestructura](https://todoeconometria.github.io/ejercicios-bigdata/infraestructura/)
+
+### 5. Descargar Datasets
+```bash
+# Descargar dataset NYC Taxi
+python datos/descargar_datos.py
+```
+> Para el dataset QoG y otros, consulta las instrucciones en `datos/qog/README.md`.
 
 ---
 
-## 📊 Contenido del Curso
+## 📚 Referencias Académicas Principales
 
-| Módulo | Tecnologías | Nivel |
-|--------|-------------|-------|
-| **01. Bases de Datos** | SQLite, PostgreSQL | 🟢 Principiante |
-| **02. Procesamiento Distribuido** | Dask, Spark | 🟡 Intermedio |
-| **03. Almacenamiento Eficiente** | Parquet, HDF5 | 🟡 Intermedio |
-| **04. Cloud y Producción** | AWS, Docker | 🔴 Avanzado |
+El diseño de estos ejercicios se basa en:
 
-Ver [Roadmap Completo →](https://todoeconometria.github.io/ejercicios-bigdata/guia-inicio/roadmap/)
+1. **Dean, J., & Ghemawat, S. (2008).** MapReduce: Simplified data processing on large clusters. *Communications of the ACM*.
+2. **Zaharia, M., et al. (2016).** Apache Spark: A unified engine for big data processing. *Communications of the ACM*.
+3. **McKinney, W. (2022).** *Python for Data Analysis*. O'Reilly Media.
+4. **Kleppmann, M. (2017).** *Designing Data-Intensive Applications*. O'Reilly Media.
 
 ---
 
-## 🎓 Para Estudiantes
+## 🤝 Contribuciones (Para Estudiantes)
 
-Si eres alumno del curso:
-
-1. **[Cómo Hacer Fork](https://todoeconometria.github.io/ejercicios-bigdata/git-github/fork-clone/)** - Crea tu copia del repo
-2. **[Sincronizar Fork](https://todoeconometria.github.io/ejercicios-bigdata/git-github/sincronizar-fork/)** - Mantén tu fork actualizado
-3. **[Entregar Ejercicios](https://todoeconometria.github.io/ejercicios-bigdata/git-github/pull-requests/)** - Crea un Pull Request
-4. **[FAQ](https://todoeconometria.github.io/ejercicios-bigdata/faq/)** - Preguntas frecuentes
-
----
-
-## 🛠️ Tecnologías Usadas
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-  <img src="https://img.shields.io/badge/Dask-FDA061?style=for-the-badge&logo=dask&logoColor=white" alt="Dask">
-  <img src="https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" alt="Spark">
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-</p>
+1. Haz **Fork** de este repositorio.
+2. Crea una rama para tu solución (`git checkout -b solucion-ejercicio-01`).
+3. Resuelve el ejercicio completando los scripts.
+4. Ejecuta los tests (si aplica).
+5. Envía un **Pull Request** para revisión.
 
 ---
 
-## 📫 Contacto
-
-- **LinkedIn:** [Juan Gutiérrez](https://www.linkedin.com/in/juangutierrezconsultor/)
-- **Web:** [TodoEconometria.com](https://www.todoeconometria.com)
-- **Email:** Disponible en mi perfil de LinkedIn
-
----
-
-## 📄 Licencia
-
-Este material educativo está disponible bajo [MIT License](LICENSE).
-
----
-
-<p align="center">
-  <strong>📖 Toda la documentación está en:</strong><br>
-  <a href="https://todoeconometria.github.io/ejercicios-bigdata/">
-    <img src="https://img.shields.io/badge/📖_Documentación_Completa-Leer_Ahora-4CAF50?style=for-the-badge" alt="Documentación">
-  </a>
-</p>
+**© 2026 Juan Marcelo Gutierrez Miranda** - Material Educativo Abierto (MIT License)
