@@ -54,6 +54,23 @@ Cada pagina incluye analisis, graficos y codigo fuente.
 
 ---
 
+## Streaming y Cloud (Tiempo Real)
+
+### Dashboards en vivo
+
+- [Observatorio Sismico Global](dashboard_sismos_global.md) -- Sismos en tiempo real desde USGS API
+- [Dashboard Sismos (interactivo)](dashboard_sismos_global.html){target="_blank"} -- Mapa Leaflet con datos en vivo, filtros por categoria
+- [ISS Tracker](dashboard_iss_tracker.md) -- Seguimiento de la Estacion Espacial Internacional
+- [Dashboard ISS (interactivo)](dashboard_iss_tracker.html){target="_blank"} -- Posicion en tiempo real, predictor de pases, trayectoria orbital
+
+### Tecnologias
+
+- **APIs en vivo:** USGS Earthquakes, Where The ISS At, Open Notify
+- **Visualizacion:** Leaflet.js, CARTO dark tiles, Lucide icons
+- **Actualizacion:** Auto-refresh cada 5-30 segundos
+
+---
+
 ## Codigo fuente
 
 Los scripts que generan estas visualizaciones estan en:
@@ -61,3 +78,6 @@ Los scripts que generan estas visualizaciones estan en:
 - `ejercicios/04_machine_learning/` -- PCA, K-Means, Silhouette
 - `ejercicios/05_nlp_text_mining/` -- Conteo, limpieza, sentimiento, Jaccard
 - `ejercicios/06_análisis_datos_de_panel/` -- Pipeline QoG con Apache Spark
+- `ejercicios/07_infraestructura_bigdata/` -- Docker Compose, Cluster Spark
+- `ejercicios/08_streaming_kafka/` -- Kafka, Spark Structured Streaming
+- `ejercicios/09_cloud_localstack/` -- LocalStack, Terraform, AWS

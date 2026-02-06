@@ -45,7 +45,7 @@ Un **fork** es hacer TU PROPIA COPIA del repositorio del profesor en GitHub.
 - :books: El profesor tiene un libro (repositorio)
 - :page_facing_up: Haces una fotocopia del libro completo (fork)
 - :pencil2: Ahora puedes escribir en TU copia sin afectar el original
-- :outbox_tray: Cuando termines, le muestras tu trabajo al profesor (Pull Request)
+- :outbox_tray: Cuando termines, subes tu trabajo con `git push` (evaluacion automatica)
 
 ```mermaid
 %%{init: {'theme':'base'}}%%
@@ -260,12 +260,13 @@ graph TD
     C -->|3. Trabajas| D[Editar codigo]
     D -->|4. Commit| E[Guardar cambios]
     E -->|5. Push| B
-    B -->|6. Pull Request| A
+    B -->|6. Evaluacion| F[Sistema evalua<br/>PROMPTS.md]
     A -->|7. Nuevos ejercicios| C
 
     style A fill:#e1f5ff,stroke:#0277bd
     style B fill:#fff9c4,stroke:#f57f17
     style C fill:#e8f5e9,stroke:#388e3c
+    style F fill:#f3e5f5,stroke:#7b1fa2
 ```
 
 ---
@@ -360,4 +361,4 @@ Ahora que tienes el repositorio clonado:
 
 - [Tu Primer Ejercicio](../guia-inicio/primer-ejercicio.md) - Empezar a trabajar
 - [Sincronizar Fork](sincronizar-fork.md) - Mantener tu fork actualizado
-- [Crear Pull Requests](pull-requests.md) - Entregar tus ejercicios
+- [Guia de Entregas](../entregas/guia-entregas.md) - Como entregar ejercicios

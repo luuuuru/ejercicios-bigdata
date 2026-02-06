@@ -118,16 +118,3 @@ fue el mas importante para ti en este bloque]
 
 **Por que fue clave:** [Tu respuesta]
 
----
-
-## Captura de pantalla
-
-Adjunta UNA captura de pantalla de tu conversacion con la IA mostrando
-el prompt que consideras mas significativo de TODO el trabajo.
-Si no usaste IA, captura del recurso web/video que mas te sirvio.
-
-![Mi prompt mas importante](capturas/prompt_clave.png)
-
-**De cual bloque es esta captura:** [A / B / C]
-
-**Que estabas intentando resolver:** [1-2 oraciones]

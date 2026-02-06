@@ -3,6 +3,10 @@
 !!! warning "IMPORTANTE"
     Tu fork NO se actualiza automaticamente. Debes sincronizarlo manualmente para obtener los ejercicios nuevos que el profesor agregue.
 
+!!! info "Sistema de Evaluacion"
+    Ya NO se usan Pull Requests. El sistema evalua tu `PROMPTS.md` directamente en tu fork.
+    Ver la [Guia de Entregas](../entregas/guia-entregas.md) para mas detalles.
+
 ---
 
 ## El Problema
@@ -472,6 +476,6 @@ Significa que estas actualizado. :white_check_mark:
 
 Ahora que sabes como sincronizar tu fork:
 
-- [Crear Pull Requests](pull-requests.md) - Entregar tus ejercicios
+- [Guia de Entregas](../entregas/guia-entregas.md) - Como entregar ejercicios
 - [Comandos Utiles](comandos-utiles.md) - Cheatsheet de Git
 - [Fork y Clone](fork-clone.md) - Si necesitas repasar los conceptos basicos

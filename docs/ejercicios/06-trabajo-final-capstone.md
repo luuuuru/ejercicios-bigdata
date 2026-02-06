@@ -116,8 +116,7 @@ Para **cada bloque** (A, B, C), responde:
 | **Error** | Que fallo y como lo resolviste? |
 | **Aprendizaje** | Que aprendiste que NO sabias antes? |
 
-Ademas, pega el **texto exacto** del prompt de IA que mas te ayudo en cada bloque
-y adjunta 1 captura de pantalla del prompt mas util.
+Ademas, pega el **texto exacto** del prompt de IA que mas te ayudo en cada bloque.
 
 **Se evalua:**
 
@@ -145,32 +144,34 @@ Responde en `05_RESPUESTAS.md`:
 
 ```
 entregas/trabajo_final/apellido_nombre/
+    PROMPTS.md                 <- LO MAS IMPORTANTE (tus prompts de IA)
     01_README.md               <- Tus datos + pregunta de investigacion
-    02_INFRAESTRUCTURA.md      <- Explicacion YAML + prompts IA + captura Spark UI
-    03_RESULTADOS.md           <- Graficos + interpretacion + prompts de graficos
-    04_REFLEXION_IA.md         <- 3 Momentos Clave x 3 bloques + prompts clave
+    02_INFRAESTRUCTURA.md      <- Explicacion YAML
+    03_RESULTADOS.md           <- Graficos + interpretacion
+    04_REFLEXION_IA.md         <- 3 Momentos Clave x 3 bloques
     05_RESPUESTAS.md           <- 4 preguntas de comprension
     docker-compose.yml         <- Tu YAML funcional
     pipeline.py                <- ETL + Analisis
     requirements.txt           <- Dependencias (pip freeze)
-    capturas/                  <- Capturas de pantalla
     .gitignore                 <- Excluir datos, venv, __pycache__
 ```
 
-Los numeros indican el **orden en que debes completarlos**. Empieza por el 01.
-
 Copia la plantilla desde `trabajo_final/plantilla/` a tu carpeta de entrega.
 
-### Proceso
+### Proceso (SIN Pull Request)
 
-1. Sincroniza tu fork con el repositorio principal
-2. Crea una rama: `git checkout -b apellido-trabajo-final`
-3. Copia la plantilla: `cp -r trabajo_final/plantilla/ entregas/trabajo_final/apellido_nombre/`
-4. Completa los archivos **en orden** (01 al 05)
-5. Commit y push a tu fork
-6. Crea un Pull Request con titulo: `[TF] Apellido Nombre - Tu Pregunta de Investigacion`
+1. Sincroniza tu fork: `git fetch upstream && git merge upstream/main`
+2. Copia la plantilla: `cp -r trabajo_final/plantilla/ entregas/trabajo_final/apellido_nombre/`
+3. **Completa PROMPTS.md mientras trabajas** - Este archivo es lo que se evalua
+4. Completa los archivos (01 al 05) + `docker-compose.yml` + `pipeline.py`
+5. Sube a tu fork: `git add . && git commit -m "Trabajo Final" && git push`
+6. **Listo!** El sistema evalua tu PROMPTS.md automaticamente
 
-### Prohibido incluir en el PR
+!!! success "No necesitas crear Pull Request"
+    El sistema automatico evalua tu archivo **PROMPTS.md** directamente en tu fork.
+    Solo asegurate de subir tu trabajo con `git push`.
+
+### Prohibido incluir
 
 - Archivos de datos (.csv, .parquet, .db)
 - Entornos virtuales (venv/, .venv/)

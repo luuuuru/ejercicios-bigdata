@@ -7,16 +7,16 @@ Esta guia te llevara paso a paso por el proceso de completar y entregar tu prime
 ```mermaid
 graph LR
     A[Fork Repo] --> B[Clone a tu PC]
-    B --> C[Crear Rama]
-    C --> D[Trabajar en Ejercicio]
+    B --> C[Trabajar en Ejercicio]
+    C --> D[Documentar PROMPTS.md]
     D --> E[Commit Cambios]
-    E --> F[Push a GitHub]
-    F --> G[Crear Pull Request]
-    G --> H[Recibir Feedback]
-    H --> I{Aprobado?}
-    I -->|No| D
-    I -->|Si| J[Ejercicio Completado]
+    E --> F[Push a tu Fork]
+    F --> G[Evaluacion Automatica]
 ```
+
+!!! warning "Sistema de Evaluacion por PROMPTS"
+    **NO se usan Pull Requests.** El sistema evalua tu archivo `PROMPTS.md`
+    directamente en tu fork. Solo necesitas hacer `git push`.
 
 ---
 
@@ -227,73 +227,49 @@ git push origin garcia-ejercicio-01
 
 ---
 
-## Paso 9: Crear Pull Request
+## Paso 9: Verificar tu Entrega
 
 1. Ve a tu fork en GitHub: `https://github.com/TU_USUARIO/ejercicios-bigdata`
-2. Veras un banner amarillo: **"garcia-ejercicio-01 had recent pushes"**
-3. Click en **"Compare & pull request"**
-4. Completa la informacion:
+2. Navega a tu carpeta de entrega
+3. Verifica que estan todos tus archivos, especialmente `PROMPTS.md`
 
-```markdown
-Titulo:
-Ejercicio 01 - [Tu Nombre Completo]
-
-Descripcion:
-## ✅ Que hice
-- Implemente la carga de datos desde CSV a SQLite usando chunks
-- Agregue indices para optimizar las queries
-- Complete el analisis de ingresos por hora del dia
-- Exporte los resultados a CSV
-
-## 🧪 Pruebas
-- ✅ Funciona sin errores
-- ✅ Probado con dataset completo (100,000 registros)
-- ✅ Queries optimizadas con indices
-
-## 💭 Preguntas
-- Hay una forma mas eficiente de hacer la carga por chunks?
-```
-
-5. Click **"Create pull request"**
-
-!!! success "Pull Request Creado"
-    El profesor recibira una notificacion y revisara tu trabajo.
+!!! success "Entrega Completada"
+    No necesitas hacer nada mas. El sistema evalua tu `PROMPTS.md` automaticamente.
 
 ---
 
-## Paso 10: Recibir y Aplicar Feedback
+## Paso 10: El Archivo PROMPTS.md
 
-### El Profesor Deja Comentarios
+**Este es el archivo mas importante de tu entrega.**
 
-Recibiras notificaciones por email cuando el profesor comente tu PR.
+Documenta tus prompts de IA mientras trabajas:
 
-### Hacer Correcciones
+```markdown
+# Prompts de IA - Ejercicio 01
 
-Si el profesor pide cambios:
+## Prompt A: Cargar datos a SQLite
 
-```bash
-# Asegurate de estar en tu rama
-git checkout garcia-ejercicio-01
+**IA usada:** ChatGPT / Claude / etc.
 
-# Edita el codigo segun el feedback
+**Prompt exacto:**
+> como cargo un csv grande a sqlite usando python con chunks
 
-# Guarda los cambios
-git add .
-git commit -m "Aplicar feedback: optimizar carga de datos"
+---
 
-# Sube los cambios
-git push origin garcia-ejercicio-01
+## Prompt B: Optimizar queries
+
+[Mismo formato...]
+
+---
+
+## Blueprint Final
+
+[Al terminar, pide a la IA un resumen de lo que construiste]
 ```
 
-**El Pull Request se actualizara automaticamente!**
-
-### Aprobacion
-
-Cuando el profesor apruebe:
-
-- :white_check_mark: Veras un check verde en el PR
-- :white_check_mark: Podras hacer merge (o el profesor lo hara)
-- :white_check_mark: Ejercicio completado!
+!!! danger "NO limpies tus prompts"
+    Pega tus prompts TAL CUAL los escribiste, con errores y todo.
+    El sistema detecta si fueron "limpiados".
 
 ---
 
@@ -365,7 +341,7 @@ git push origin garcia-ejercicio-01
 
 ## Checklist del Ejercicio
 
-Antes de crear el Pull Request, verifica:
+Antes de subir tu trabajo (git push), verifica:
 
 - [ ] El codigo ejecuta sin errores
 - [ ] Todas las tareas del ejercicio estan completas

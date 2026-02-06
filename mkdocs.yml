@@ -179,39 +179,18 @@ nav:
     - Instalacion de Herramientas: guia-inicio/instalacion.md
     - Tu Primer Ejercicio: guia-inicio/primer-ejercicio.md
     - Roadmap del Curso: guia-inicio/roadmap.md
-<<<<<<< HEAD
-=======
     - Infraestructura del Lab: infraestructura.md
->>>>>>> 4df5efddc606911df806c4ff90b7658fdeb12273
+    - Guia de Entregas: entregas/guia-entregas.md
 
   - Git y GitHub:
     - git-github/index.md
     - Fork y Clone: git-github/fork-clone.md
     - Sincronizar Fork: git-github/sincronizar-fork.md
-    - Crear Pull Requests: git-github/pull-requests.md
     - Comandos Utiles: git-github/comandos-utiles.md
 
   - Ejercicios:
     - ejercicios/index.md
-<<<<<<< HEAD
-    - Bases de Datos:
-      - '1.1 - Introduccion SQLite': ejercicios/01-introduccion-sqlite.md
-      - '2.1 - PostgreSQL HR': ejercicios/02-postgresql-hr.md
-      - '2.2 - PostgreSQL Jardineria': ejercicios/03-postgresql-jardineria.md
-      - '2.3 - Migracion SQLite → PostgreSQL': ejercicios/04-migracion-sqlite-postgresql.md
-      - '3.1 - Oracle HR': ejercicios/05-oracle-hr.md
-      - '5.1 - Analisis Excel/Python': ejercicios/06-analisis-excel-python.md
-    - Big Data y ETL:
-      - '02 - Pipeline ETL QoG': ejercicios/02-pipeline-etl-qog.md
-
-  - Dashboards:
-    - dashboards/index.md
-
-  - Entregas:
-    - Guia General de Entregas: entregas/guia-entregas.md
-
-  - FAQ: faq.md
-=======
+    - Guia de Entregas: entregas/guia-entregas.md
     - 'Modulo 1: Bases de Datos':
       - '1.1 - Introduccion SQLite': ejercicios/01-introduccion-sqlite.md
       - '2.1 - PostgreSQL HR': ejercicios/02-postgresql-hr.md
@@ -219,15 +198,23 @@ nav:
       - '2.3 - Migracion SQLite a PostgreSQL': ejercicios/04-migracion-sqlite-postgresql.md
       - '3.1 - Oracle HR': ejercicios/05-oracle-hr.md
       - '5.1 - Analisis Excel/Python': ejercicios/06-analisis-excel-python.md
-    - 'Modulo 2: Big Data y ETL':
+    - 'Modulo 2: Limpieza de Datos y ETL':
       - 'Pipeline ETL QoG': ejercicios/02-pipeline-etl-qog.md
-      - 'Procesamiento Distribuido': ejercicios/03-procesamiento-distribuido.md
-    - 'Modulo 3: Analitica Avanzada':
-      - 'Machine Learning': ejercicios/04-machine-learning.md
+    - 'Modulo 3: Procesamiento Distribuido':
+      - 'Procesamiento con Dask': ejercicios/03-procesamiento-distribuido.md
+    - 'Modulo 4: Machine Learning':
+      - 'PCA, K-Means y Transfer Learning': ejercicios/04-machine-learning.md
       - 'Series Temporales ARIMA': ejercicios/07-series-temporales-arima.md
+    - 'Modulo 5: NLP y Text Mining':
       - 'NLP y Text Mining': ejercicios/05-nlp-mining.md
-    - 'Modulo 4: Econometria de Panel':
-      - 'Analisis de Datos de Panel': ejercicios/08-panel-data.md
+    - 'Modulo 6: Analisis de Datos de Panel':
+      - 'Datos de Panel': ejercicios/08-panel-data.md
+    - 'Modulo 7: Infraestructura Big Data':
+      - 'Docker Compose y Cluster Spark': ejercicios/07-infraestructura-bigdata.md
+    - 'Modulo 8: Streaming con Kafka':
+      - 'Streaming con Kafka': ejercicios/08-streaming-kafka.md
+    - 'Modulo 9: Cloud con LocalStack':
+      - 'Cloud con LocalStack': ejercicios/09-cloud-localstack.md
     - 'Trabajo Final':
       - 'Enunciado y Plantilla': ejercicios/06-trabajo-final-capstone.md
 
@@ -247,11 +234,14 @@ nav:
       - 'Vectorizacion y Clustering': dashboards/05_vectorizacion_y_clustering.md
     - 'Datos de Panel (Big Data)':
       - 'QoG - Spark + PostgreSQL + ML': dashboards/06_analisis_panel_qog.md
+    - 'Streaming y Cloud':
+      - 'Observatorio Sismico Global': dashboards/dashboard_sismos_global.md
+      - 'ISS Tracker': dashboards/dashboard_iss_tracker.md
 
   - Entregas:
     - Guia General: entregas/guia-entregas.md
+    - Streaming y Cloud: entregas/streaming-cloud.md
     - FAQ: faq.md
->>>>>>> 4df5efddc606911df806c4ff90b7658fdeb12273
 
 copyright: >
   Copyright &copy; 2024 TodoEconometria -

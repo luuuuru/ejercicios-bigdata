@@ -46,12 +46,12 @@ documentar como las usaste y que aprendiste.
 2. Escribe tu `docker-compose.yml` con los 3 servicios minimos
 3. Agrega `healthcheck` al menos para PostgreSQL
 4. Ejecuta `docker compose up -d` y verifica que todo arranca
-5. Abre el Spark UI en tu navegador y toma una **captura de pantalla** mostrando el worker conectado
+5. Abre el Spark UI en tu navegador y verifica que el worker esta conectado
 6. Escribe `INFRAESTRUCTURA.md` explicando **cada seccion** de tu YAML con tus palabras
 
 **Pistas:**
-- Imagen Spark: `apache/spark:3.5.4-python3` (o `bitnami/spark:3.5`)
-- Imagen PostgreSQL: `postgres:15-alpine`
+- Imagen Spark: `apache/spark:3.5.4-python3` (la imagen `bitnami/spark` fue descontinuada en 2025, no usarla)
+- Imagen PostgreSQL: `postgres:16-alpine`
 - El Master de Spark usa el puerto 7077 para comunicacion y 8080 para la UI web
 - Los Workers necesitan saber la URL del Master para conectarse
 
@@ -136,8 +136,6 @@ Para **cada bloque** (A, B, C), responde estas 3 preguntas:
 **Ademas, para cada bloque:** Pega el **texto exacto** del prompt de IA que
 mas te ayudo. No lo resumas ni lo parafrasees: copia y pega el texto tal cual.
 
-**Ademas:** Adjunta 1 captura de pantalla del prompt que mas te ayudo
-(o del recurso web/video si no usaste IA). Guardala en `capturas/`.
 
 **IMPORTANTE - Donde van los prompts:**
 
@@ -181,33 +179,45 @@ Responde en `05_RESPUESTAS.md`:
 
 ```
 entregas/trabajo_final/apellido_nombre/
+    PROMPTS.md                 <- LO MAS IMPORTANTE (tus prompts de IA)
     01_README.md               <- (1) Tus datos + pregunta de investigacion
-    02_INFRAESTRUCTURA.md      <- (2) Explicacion YAML + prompts IA + captura Spark UI
-    03_RESULTADOS.md           <- (3) Graficos + interpretacion + prompts de graficos
-    04_REFLEXION_IA.md         <- (4) 3 Momentos Clave x 3 bloques + prompts clave
+    02_INFRAESTRUCTURA.md      <- (2) Explicacion YAML
+    03_RESULTADOS.md           <- (3) Graficos + interpretacion
+    04_REFLEXION_IA.md         <- (4) 3 Momentos Clave x 3 bloques
     05_RESPUESTAS.md           <- (5) 4 preguntas de comprension
     docker-compose.yml         <- Tu YAML funcional
     pipeline.py                <- ETL + Analisis
     requirements.txt           <- Dependencias (pip freeze)
-    capturas/                  <- Tus capturas de pantalla (Spark UI, prompts, graficos)
     .gitignore                 <- Excluir datos, venv, __pycache__
 ```
 
-Los numeros indican el **orden en que debes completarlos**. Empieza por el 01.
-
 Copia la plantilla desde `trabajo_final/plantilla/` a tu carpeta de entrega.
 
-### Proceso
+### Proceso (SIN Pull Request)
 
-1. Sincroniza tu fork con el repositorio principal
-2. Crea una rama: `git checkout -b apellido-trabajo-final`
-3. Copia la plantilla: `cp -r trabajo_final/plantilla/ entregas/trabajo_final/apellido_nombre/`
-4. Crea la carpeta de capturas: `mkdir entregas/trabajo_final/apellido_nombre/capturas/`
-5. Completa los archivos **en orden** (01 al 05), junto con `docker-compose.yml` y `pipeline.py`
-6. Commit y push a tu fork
-7. Crea un Pull Request con titulo: `[TF] Apellido Nombre - Tu Pregunta de Investigacion`
+1. Sincroniza tu fork: `git fetch upstream && git merge upstream/main`
+2. Copia la plantilla: `cp -r trabajo_final/plantilla/ entregas/trabajo_final/apellido_nombre/`
+3. **Completa PROMPTS.md** mientras trabajas (documenta tus prompts de IA)
+5. Completa los demas archivos (01 al 05) + `docker-compose.yml` + `pipeline.py`
+6. Sube a tu fork: `git add . && git commit -m "Trabajo Final" && git push`
+7. **Listo!** El profesor revisa tu fork automaticamente (no necesitas crear PR)
 
-### Prohibido incluir en el PR
+### IMPORTANTE: Sistema de Evaluacion por Prompts
+
+**El archivo PROMPTS.md es lo que se evalua principalmente.**
+
+Este archivo tiene 2 partes:
+
+| Parte | Que poner | Como debe verse |
+|-------|-----------|-----------------|
+| **PARTE 1** | Tus 3 prompts reales (A, B, C) | Con errores, informal, TAL CUAL lo escribiste |
+| **PARTE 2** | Blueprint generado por IA | Perfecto, profesional (lo genera la IA al final) |
+
+**REGLA CRITICA:** Los prompts de la Parte 1 deben ser COPIA EXACTA de lo que
+escribiste. NO los corrijas. Si escribiste "como ago q spark lea csv" con errores,
+pega ESO. **El sistema detecta si "limpiaste" tus prompts.**
+
+### Prohibido incluir
 
 - Archivos de datos (.csv, .parquet, .db)
 - Entornos virtuales (venv/, .venv/)
@@ -230,6 +240,58 @@ Copia la plantilla desde `trabajo_final/plantilla/` a tu carpeta de entrega.
 - Copiar los paises del ejemplo del profesor (Asia Central): -30%
 - YAML que no funciona sin explicacion de por que: -15%
 - Reflexion IA ausente o generica: -20%
+
+---
+
+## IMPORTANTE: Sistema Anti-Copia Automatico
+
+Tu entrega sera analizada **automaticamente** para detectar similitud con el ejemplo
+del profesor. Este sistema verifica:
+
+| Elemento | Que detecta |
+|----------|-------------|
+| **Paises** | Si usas KAZ, UZB, TKM, KGZ, TJK (Asia Central) |
+| **Region** | Si mencionas "Asia Central", "Ruta de la Seda", etc. |
+| **Variables** | Si usas las mismas variables QoG del ejemplo (sh_h2o, wdi_terr, etc.) |
+| **Temas** | Si combinas agua + terrorismo como en el ejemplo |
+| **Codigo** | Si copias estructura o patrones del ejemplo |
+
+### Niveles de similitud y consecuencias
+
+| Nivel | Similitud | Accion automatica |
+|-------|-----------|-------------------|
+| **COPIA** | >80% | RECHAZADO - Tienes 1 oportunidad mas |
+| **Muy similar** | 50-80% | Penalizacion -30% |
+| **Similar parcial** | 25-50% | Penalizacion -10% |
+| **Original** | <25% | Sin penalizacion |
+
+### Si tu entrega es rechazada por similitud
+
+1. Recibiras un mensaje automatico explicando por que
+2. Tienes **1 oportunidad** para rehacer tu trabajo con:
+   - Otros 5 paises (de otra region del mundo)
+   - Otras variables QoG
+   - Otra pregunta de investigacion
+3. Si la segunda entrega tambien es similar: nota 0
+
+### Sugerencias para ser original
+
+**Regiones interesantes (NO uses Asia Central):**
+- Sudamerica: ARG, BRA, CHL, COL, PER
+- Europa del Este: POL, HUN, CZE, ROU, BGR
+- Africa: NGA, ZAF, KEN, GHA, ETH
+- Sudeste Asiatico: IDN, THA, VNM, MYS, PHL
+- Medio Oriente: SAU, ARE, TUR, IRN, EGY
+
+**Temas interesantes (NO uses agua + terrorismo):**
+- Educacion vs PIB
+- Corrupcion vs democracia
+- Salud vs desarrollo
+- Libertad de prensa vs estabilidad
+- Igualdad de genero vs economia
+
+**La creatividad suma puntos.** Un analisis original sobre un tema poco comun
+puede obtener puntos extra en el ranking.
 
 ---
 

@@ -99,11 +99,8 @@ entregas/**/.env
 # 1b. Memoria de Claude Code (contiene referencias a archivos privados)
 CLAUDE.md
 
-# 2. Scripts de administración del profesor (NO publicar)
-scripts/
-
-# 3. Modulo 07 oculto temporalmente (no publicar hasta fecha indicada)
-ejercicios/07_infraestructura_bigdata/
+# 2. Modulo 07 - Solo 7.3 oculto (7.1 Docker y 7.2 Spark ya publicados)
+ejercicios/07_infraestructura_bigdata/7.3_hadoop_hdfs/
 
 # 4. Configuración local y secretos
 .env

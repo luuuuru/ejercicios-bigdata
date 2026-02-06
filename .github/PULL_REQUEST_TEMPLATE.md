@@ -1,105 +1,51 @@
-# 📝 Entrega: [Tipo - Ejercicio/Dashboard]
+# ESTE REPOSITORIO NO ACEPTA PULL REQUESTS
 
-> **Flujo correcto**: Fork del repo → Trabajar en tu fork → Abrir PR desde tu fork hacia el repo original
+## Sistema de Evaluacion por PROMPTS
 
-**Elimina las secciones que NO apliquen a tu entrega**
+Este repositorio usa un sistema de evaluacion basado en **PROMPTS**, no en Pull Requests.
 
----
-
-## 👨‍🎓 Información del Alumno
-
-- **Nombre completo:** [Tu nombre]
-- **GitHub:** @[tu-usuario]
-- **Tipo de entrega:** [ ] Ejercicio [ ] Dashboard
-- **Código:** [Ej: 1.1_sqlite o dashboard-nyc-taxi]
+**Tu PR sera cerrado automaticamente.**
 
 ---
 
-## 📦 PARA EJERCICIOS (Elimina si entregas Dashboard)
+## Como entregar tu trabajo correctamente:
 
-### Información del Ejercicio
-- **Código del ejercicio:** (Ej: 1.1_sqlite)
-- **Carpeta de entrega:** `entregas/[CODIGO]/[apellido_nombre]/`
+### Paso 1: Trabaja en TU fork
+Tu fork es tu copia personal. Trabaja ahi libremente.
 
-### ✅ Checklist - Estructura
-- [ ] Creé la carpeta con el formato correcto: `entregas/[CODIGO]/[apellido_nombre]/`
-- [ ] El nombre de mi carpeta usa solo minúsculas y guión bajo (Ej: `garcia_maria`)
-- [ ] Incluí todos los archivos obligatorios
+### Paso 2: Documenta tus prompts
+El archivo mas importante es `PROMPTS.md`. Documenta:
+- Tus prompts de IA (copiados tal cual, con errores)
+- Capturas de pantalla de cada prompt
+- Un blueprint final generado por la IA
 
-### ✅ Checklist - Archivos (Ejercicio 1.1 - SQLite)
-- [ ] `ANALISIS_DATOS.md` - Completado con todos mis hallazgos
-- [ ] `resumen_eda.md` - Resumen ejecutivo del análisis
-- [ ] `REFLEXION.md` - Respuestas a las 6 preguntas
-- [ ] Completé todas las secciones de cada archivo
-- [ ] Los diagramas ER están incluidos (formato Mermaid)
-
-### ✅ Checklist - Formato
-- [ ] Los archivos .md se visualizan correctamente en GitHub
-- [ ] Las tablas Markdown están bien formateadas
-- [ ] Los diagramas Mermaid se renderizan correctamente
-- [ ] NO incluí archivos `.db`, `.csv`, `.sqlite`
-
----
-
-## 📊 PARA DASHBOARDS (Elimina si entregas Ejercicio)
-
-### Descripción del Dashboard
-[Describe brevemente qué hace tu dashboard y qué visualiza]
-
-### ✅ Checklist - Requisitos Obligatorios
-- [ ] Mínimo 3 visualizaciones diferentes
-- [ ] Estadísticas descriptivas (mínimo 5)
-- [ ] Análisis de calidad de datos
-- [ ] README.md completo en la carpeta del dashboard
-- [ ] Código limpio y comentado
-
-### ✅ Checklist - Estructura
-- [ ] Carpeta en `dashboards/[mi-nombre]-dashboard/`
-- [ ] Archivo `app.py` funcional
-- [ ] Carpeta `templates/` con HTML
-- [ ] No incluyo datos en el PR (están en `.gitignore`)
-
-### ✅ Checklist - Documentación
-- [ ] README con descripción del dashboard
-- [ ] README con instrucciones de ejecución
-- [ ] README con tecnologías utilizadas
-- [ ] README con 3-5 conclusiones del análisis
-
-### 🛠️ Tecnologías Utilizadas
-- [ ] Flask
-- [ ] Pandas
-- [ ] Chart.js / Plotly / Otra
-- [ ] Otras: [especificar]
-
----
-
-## 📄 Lista de Archivos Entregados
-
-Escribe la estructura de archivos que estás entregando:
-
-```
-entregas/1.1_sqlite/apellido_nombre/  (O dashboards/mi-dashboard/)
-├── archivo1.md
-├── archivo2.md
-└── ...
+### Paso 3: Sube a tu fork
+```bash
+git add .
+git commit -m "Mi entrega"
+git push
 ```
 
----
-
-## 💬 Comentarios Adicionales (Opcional)
-
-[Si tienes algo que comentar sobre tu entrega, dificultades encontradas, o características destacadas]
+### Paso 4: Listo!
+No necesitas hacer nada mas. El sistema evalua tu `PROMPTS.md` automaticamente.
 
 ---
 
-## ✔️ Checklist Final (TODOS)
+## Por que no usamos PRs?
 
-- [ ] Leí las instrucciones del ejercicio/dashboard
-- [ ] Probé mi entrega localmente (si aplica)
-- [ ] Este PR viene desde MI fork (no desde el repositorio original)
-- [ ] Mi rama tiene un nombre descriptivo (Ej: `garcia-ejercicio-1.1`)
-- [ ] Hice commits con mensajes descriptivos
+| Antes (PRs) | Ahora (PROMPTS) |
+|-------------|-----------------|
+| Revisar codigo linea por linea | Evaluar proceso de pensamiento |
+| Codigo puede ser copiado/generado | Prompts muestran TU aprendizaje |
+| Revision manual lenta | Evaluacion automatica rapida |
 
 ---
 
-¡Gracias por revisar mi trabajo! 🚀
+## Recursos
+
+- [Guia de Entregas](https://todoeconometria.github.io/ejercicios-bigdata/entregas/guia-entregas/)
+- [Template de PROMPTS.md](https://github.com/TodoEconometria/ejercicios-bigdata/blob/main/trabajo_final/plantilla/PROMPTS.md)
+
+---
+
+**Si llegaste aqui por error, cierra este PR y sigue la guia de entregas.**

@@ -89,10 +89,20 @@ El script `setup_cluster.ps1` levanta estos servicios automáticamente:
 
 ## 🛠️ Cómo Iniciar
 
-Simplemente abre PowerShell como Administrador y ejecuta:
+Para levantar el stack de Docker, abre PowerShell como Administrador y ejecuta:
 
 ```powershell
-./scripts/setup_cluster.ps1
+# Navegar a la carpeta del proyecto
+cd "C:\Users\TU_USUARIO\Documents\ejercicios_bigdata"
+
+# Levantar los servicios
+docker-compose up -d
+
+# Verificar que están corriendo
+docker ps
 ```
 
-Sigue las instrucciones en pantalla. ¡El script detectará automáticamente si tienes la configuración avanzada de SSD!
+**Servicios disponibles después de iniciar:**
+- PostgreSQL: `localhost:5432`
+- Spark Master UI: `localhost:8081`
+- pgAdmin: `localhost:8080`

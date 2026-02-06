@@ -249,7 +249,7 @@ def exportar_resultados(db_path, query, output_path):
 
 ## Entregables
 
-Debes entregar via Pull Request:
+Debes entregar subiendo a tu fork (git push):
 
 1. **Codigo Python:** `01_cargar_sqlite.py`
 2. **Base de datos:** `datos/taxi.db` (NO subir a GitHub, muy grande)
@@ -422,5 +422,5 @@ Responde en tu `ANALISIS.md`:
 Una vez completado este ejercicio:
 
 - [Ejercicio 02: Limpieza de Datos](index.md) - Siguiente ejercicio
-- [Crear Pull Request](../git-github/pull-requests.md) - Entregar tu trabajo
+- [Guia de Entregas](../entregas/guia-entregas.md) - Como entregar tu trabajo
 - [Roadmap](../guia-inicio/roadmap.md) - Ver todos los ejercicios

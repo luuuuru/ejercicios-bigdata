@@ -1,0 +1,69 @@
+# Cierra automaticamente todos los Pull Requests
+# Este repositorio usa evaluacion por PROMPTS, no PRs
+#
+# Mas info: https://github.com/TodoEconometria/evaluacion-prompts-ia
+
+name: Cerrar PRs Automaticamente
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+jobs:
+  cerrar-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Comentar y cerrar PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const mensaje = `
+            ## Este repositorio NO acepta Pull Requests
+
+            Hola @${context.payload.pull_request.user.login},
+
+            Este repositorio usa un **sistema de evaluacion por PROMPTS**, no Pull Requests.
+
+            ### Como entregar tu trabajo:
+
+            1. **Trabaja en TU fork** (tu copia del repositorio)
+            2. **Documenta tus prompts** en el archivo \`PROMPTS.md\`
+            3. **Sube con \`git push\`** a tu fork
+            4. **Listo!** El sistema evalua automaticamente tu \`PROMPTS.md\`
+
+            ### Por que no usamos PRs?
+
+            - Evaluamos tu **proceso de aprendizaje** (prompts), no el codigo
+            - El codigo puede ser generado por IA, pero los prompts muestran tu pensamiento
+            - Es mas eficiente para ti y para el profesor
+
+            ### Recursos:
+
+            - [Guia de Entregas](https://todoeconometria.github.io/ejercicios-bigdata/entregas/guia-entregas/)
+            - [Como funciona PROMPTS.md](https://todoeconometria.github.io/ejercicios-bigdata/entregas/guia-entregas/#el-archivo-mas-importante-promptsmd)
+
+            ---
+
+            *Este PR sera cerrado automaticamente. Si tienes dudas, contacta al profesor.*
+            `;
+
+            // Comentar en el PR
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: mensaje
+            });
+
+            // Cerrar el PR
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              state: 'closed'
+            });
+
+            console.log(`PR #${context.payload.pull_request.number} cerrado automaticamente`);

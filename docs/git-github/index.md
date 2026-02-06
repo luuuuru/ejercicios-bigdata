@@ -1,6 +1,6 @@
 # Git y GitHub
 
-Guias completas para trabajar con Git y GitHub en este curso.
+Guias para trabajar con Git y GitHub en este curso.
 
 ## Que encontraras aqui?
 
@@ -23,15 +23,6 @@ Mantener tu Fork actualizado con los ejercicios nuevos del profesor:
 - Resolver conflictos de merge
 - Diagramas visuales del flujo completo
 
-### [Crear Pull Requests](pull-requests.md)
-
-Entregar tus ejercicios al profesor:
-
-- Que es un Pull Request
-- Como crear un PR profesional
-- Como recibir y aplicar feedback
-- Mejores practicas
-
 ### [Comandos Utiles](comandos-utiles.md)
 
 Cheatsheet de Git para el dia a dia:
@@ -43,20 +34,21 @@ Cheatsheet de Git para el dia a dia:
 
 ---
 
-## Flujo de Trabajo Completo
+## Flujo de Trabajo (Sin Pull Request)
 
 ```mermaid
 graph LR
     A[Fork Repo] --> B[Clone a PC]
-    B --> C[Crear Rama]
-    C --> D[Trabajar]
+    B --> C[Trabajar]
+    C --> D[Documentar PROMPTS.md]
     D --> E[Commit]
-    E --> F[Push]
-    F --> G[Pull Request]
-    G --> H{Aprobado?}
-    H -->|No| D
-    H -->|Si| I[Completado]
+    E --> F[Push a tu Fork]
+    F --> G[Evaluacion Automatica]
 ```
+
+!!! success "Sistema simplificado"
+    **No necesitas crear Pull Request.** El sistema evalua tu `PROMPTS.md`
+    automaticamente. Solo sube tu trabajo con `git push`.
 
 ---
 
@@ -78,7 +70,7 @@ graph LR
     - Compartir codigo publicamente
     - Colaborar con otros desarrolladores
     - Alojar proyectos
-    - Gestionar Pull Requests
+    - Gestionar proyectos y colaboracion
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -121,7 +113,7 @@ graph LR
     Aprende a [Sincronizar tu Fork](sincronizar-fork.md) para obtener ejercicios nuevos.
 
 !!! success "Completaste un ejercicio?"
-    Aprende a [Crear Pull Requests](pull-requests.md) para entregarlo.
+    Solo haz `git push` a tu fork. Lee la [Guia de Entregas](../entregas/guia-entregas.md).
 
 ---
 
