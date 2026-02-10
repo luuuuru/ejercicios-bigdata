@@ -1,0 +1,33 @@
+# Datos (no subir al repositorio)
+*.csv
+*.parquet
+*.db
+datos/
+
+# Entorno virtual
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Docker
+docker-volumes/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Credenciales
+.env
+*.key
+credentials.*

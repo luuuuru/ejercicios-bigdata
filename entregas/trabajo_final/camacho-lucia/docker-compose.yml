@@ -1,0 +1,83 @@
+﻿# docker-compose.yml - Cluster Spark + PostgreSQL 
+  
+
+services:
+
+  # ============================
+  # POSTGRESQL - Base de datos
+  # ============================
+  postgres:
+    image: postgres:16-alpine
+    container_name: spark-postgres
+    hostname: postgres
+    environment:
+      POSTGRES_USER: spark_user
+      POSTGRES_PASSWORD: spark_pass
+      POSTGRES_DB: resultados_spark
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - spark-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spark_user -d resultados_spark"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================
+  # SPARK MASTER
+  # ============================
+  spark-master:
+    image: apache/spark:3.5.4-python3
+    container_name: spark-master
+    hostname: spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+      - SPARK_NO_DAEMONIZE=true
+    ports:
+      - "7077:7077"    # Comunicacion del cluster
+      - "8080:8080"    # Web UI del Master
+    volumes:
+      - ./datos:/opt/spark-data        # Datos compartidos
+      - ./scripts:/opt/spark-apps      # Scripts Python
+      - ./jars:/opt/spark-jars         # JARs (JDBC, etc.)
+    networks:
+      - spark-network
+
+  # ============================
+  # SPARK WORKER
+  # ============================
+  spark-worker-1:
+    image: apache/spark:3.5.4-python3
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    command: >
+      /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker
+      spark://spark-master:7077
+    environment:
+      - SPARK_WORKER_MEMORY=4G
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_WEBUI_PORT=8081
+      - SPARK_NO_DAEMONIZE=true
+    ports:
+      - "8081:8081"    # Web UI del Worker
+    volumes:
+      - ./datos:/opt/spark-data        # Mismos datos que el master
+      - ./scripts:/opt/spark-apps      # Mismos scripts
+      - ./jars:/opt/spark-jars         # Mismos JARs
+    depends_on:
+      - spark-master
+    networks:
+      - spark-network
+
+volumes:
+  postgres_data:
+
+networks:
+  spark-network:
+    driver: bridge
